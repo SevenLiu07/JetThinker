@@ -1,5 +1,5 @@
 @import "./common.less";
-@product-margin: 50px 0 100px 0;
+@product-margin: 50px 0 0 0;
 .banner-cases{
     background:url("../images/case_banner.png") center top no-repeat;
 }
@@ -60,7 +60,59 @@
     background:url("../images/feature_bg.png") center top no-repeat;
     .feature-con{
         .content-box();
-        padding: @module-padding;
+        padding: @content-pad-top;
+        .flist{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            padding: @content-pad-top;
+            color: @color-white;
+            text-align: center;
+            .part-four{
+                width:400px;
+                height:310px;
+                padding-top: 90px;
+                background:rgba(2,83,186,1);
+                span{
+                    font-size: 120px !important;
+                }
+                p{
+                    font-size: 24px;
+                }
+            }
+            .part-list{
+                display: flex;
+                align-content: flex-start;
+                flex-wrap: wrap;
+                width: 800px;
+                .common-block{
+                    width:200px;
+                    height:160px;
+                    padding-top: 40px;
+                    span{
+                        font-size: 78px !important;
+                    }
+                    p{
+                        font-size: 16px;
+                    }
+                }
+                .block-gray{
+                    background:rgba(214,215,217,1);
+                }
+                .block-blue{
+                    background:rgba(2,83,186,1);
+                }
+                .block-white{
+                    background: @color-white;
+                    span{
+                        color:rgba(136,136,136,1);
+                    }
+                    p{
+                        color: @color-grays;
+                    }
+                }
+            }
+        }
     }
 }
 /*shwo product*/

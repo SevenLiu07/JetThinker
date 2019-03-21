@@ -428,7 +428,7 @@ footer .copyright p {
 /*PRODUCT CENTER*/
 .pro-discript {
   padding: 100px 32px;
-  margin: 50px 0 100px 0;
+  margin: 50px 0 0 0;
   background: #f8f8f8;
 }
 .pro-discript p {
@@ -443,7 +443,59 @@ footer .copyright p {
 .pro-feature .feature-con {
   width: 1200px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 50px 0 0 0;
+}
+.pro-feature .feature-con .flist {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 50px 0 0 0;
+  color: #ffffff;
+  text-align: center;
+}
+.pro-feature .feature-con .flist .part-four {
+  width: 400px;
+  height: 310px;
+  padding-top: 90px;
+  background: #0253ba;
+}
+.pro-feature .feature-con .flist .part-four span {
+  font-size: 120px !important;
+}
+.pro-feature .feature-con .flist .part-four p {
+  font-size: 24px;
+}
+.pro-feature .feature-con .flist .part-list {
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  width: 800px;
+}
+.pro-feature .feature-con .flist .part-list .common-block {
+  width: 200px;
+  height: 160px;
+  padding-top: 40px;
+}
+.pro-feature .feature-con .flist .part-list .common-block span {
+  font-size: 78px !important;
+}
+.pro-feature .feature-con .flist .part-list .common-block p {
+  font-size: 16px;
+}
+.pro-feature .feature-con .flist .part-list .block-gray {
+  background: #d6d7d9;
+}
+.pro-feature .feature-con .flist .part-list .block-blue {
+  background: #0253ba;
+}
+.pro-feature .feature-con .flist .part-list .block-white {
+  background: #ffffff;
+}
+.pro-feature .feature-con .flist .part-list .block-white span {
+  color: #888888;
+}
+.pro-feature .feature-con .flist .part-list .block-white p {
+  color: #333333;
 }
 /*shwo product*/
 .show-product {
