@@ -514,6 +514,20 @@ footer .copyright p {
   left: 50%;
   animation: rotate 90s infinite linear;
 }
+#banner-canvas .star {
+  width: 2px;
+  height: 2px;
+  background: #f7f7b6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-origin: 0 0 -300px;
+  transform-origin: 0 0 -300px;
+  -webkit-transform: translateZ(-300px);
+  transform: translateZ(-300px);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
 /*banner swiper*/
 .banner_box {
   width: 100%;
