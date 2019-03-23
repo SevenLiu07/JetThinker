@@ -50,8 +50,12 @@ body .main header .headCon_box .logo {
   display: inline-block;
   line-height: 85px;
 }
-html .main header .headCon_box .logo img,
-body .main header .headCon_box .logo img {
+html .main header .headCon_box .logo a,
+body .main header .headCon_box .logo a {
+  display: block;
+}
+html .main header .headCon_box .logo a img,
+body .main header .headCon_box .logo a img {
   width: 145px;
   height: 30px;
 }

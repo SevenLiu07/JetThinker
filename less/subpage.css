@@ -50,8 +50,12 @@ body .main header .headCon_box .logo {
   display: inline-block;
   line-height: 85px;
 }
-html .main header .headCon_box .logo img,
-body .main header .headCon_box .logo img {
+html .main header .headCon_box .logo a,
+body .main header .headCon_box .logo a {
+  display: block;
+}
+html .main header .headCon_box .logo a img,
+body .main header .headCon_box .logo a img {
   width: 145px;
   height: 30px;
 }
@@ -542,6 +546,10 @@ footer .copyright p {
   line-height: 44px;
   display: block;
 }
+/*common gray background*/
+.bg_color {
+  background: #f8f8f8;
+}
 /*successull case*/
 .success-case {
   padding: 100px 0;
@@ -655,21 +663,23 @@ footer .copyright p {
 .postlist ul {
   display: inline;
 }
-.postlist ul li a {
-  position: relative;
-  padding: 32px;
-  display: block;
-}
-.postlist ul li a h5 {
+.postlist ul li h5 {
   font-size: 22px;
   color: #333333;
   line-height: 40px;
   font-weight: 500;
 }
-.postlist ul li a p {
+.postlist ul li p {
   font-size: 18px;
   color: #666666;
   line-height: 24px;
+  line-height: 30px;
+}
+.postlist ul li a {
+  position: relative;
+  padding: 32px;
+  margin-bottom: 30px;
+  display: block;
 }
 .postlist ul li a .links {
   position: absolute;

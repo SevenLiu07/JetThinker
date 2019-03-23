@@ -71,7 +71,12 @@
             display: block;
         }
     }
-}    
+}   
+
+/*common gray background*/
+.bg_color{
+    background: @color-gray-light
+}
 /*successull case*/
 .success-case{
     padding:@module-padding;
@@ -190,16 +195,18 @@
     ul{
         display: inline;
         li{
+            h5{
+                .article-h5();
+            }
+            p{
+                .article-con(18px);
+                line-height: 30px;
+            }
             a{
                 position: relative;
                 padding: 32px;
+                margin-bottom: 30px;
                 display: block;
-                h5{
-                    .article-h5();
-                }
-                p{
-                    .article-con(18px);
-                }
                 .links{
                     position: absolute;
                     right: 40px;
