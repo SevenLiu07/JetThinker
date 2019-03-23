@@ -3,6 +3,12 @@
   width: 1200px;
   margin: 0 auto;
 }
+/*css sprites
+  @width：图标宽度
+  @height：图标高度
+  @posit-x：图标在x轴位置
+  @posit-y：图标在y轴位置
+*/
 * {
   font-family: MicrosoftYaHei;
 }
@@ -56,15 +62,15 @@ body .main header .headCon_box .menulist {
 }
 html .main header .headCon_box .menulist ul,
 body .main header .headCon_box .menulist ul {
-  display: inline;
+  margin: 0;
+  padding: 15px;
 }
 html .main header .headCon_box .menulist ul li,
 body .main header .headCon_box .menulist ul li {
   position: relative;
   color: #ffffff;
   width: auto;
-  height: 50px;
-  line-height: 50px;
+  line-height: 35px;
   float: left;
 }
 html .main header .headCon_box .menulist ul li .sub_menu,
@@ -75,7 +81,6 @@ body .main header .headCon_box .menulist ul li .sub_menu {
   background: #ffffff;
   border: 1px solid #dbdbdb;
   left: -48px;
-  margin-top: 2px;
 }
 html .main header .headCon_box .menulist ul li .sub_menu ul,
 body .main header .headCon_box .menulist ul li .sub_menu ul {
@@ -85,7 +90,7 @@ body .main header .headCon_box .menulist ul li .sub_menu ul {
 html .main header .headCon_box .menulist ul li .sub_menu ul li a,
 body .main header .headCon_box .menulist ul li .sub_menu ul li a {
   width: 200px;
-  height: 50px;
+  line-height: 50px;
   color: #333333;
   padding: 0;
   padding-left: 22px;
@@ -104,6 +109,7 @@ body .main header .headCon_box .menulist ul li a {
   font-size: 14px;
   padding: 0 35px;
   display: block;
+  border-bottom: 2px solid transparent;
 }
 html .main header .headCon_box .menulist ul li a .role,
 body .main header .headCon_box .menulist ul li a .role {
@@ -139,7 +145,55 @@ body .main header .headCon_box .menulist ul li a:hover .role {
 }
 html .main header .headCon_box .active,
 body .main header .headCon_box .active {
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff !important;
+}
+/*common animate button*/
+.animate-button {
+  display: block;
+  position: relative;
+  animation: animate-btn 2s infinite;
+  -moz-animation: animate-btn 2s infinite;
+  /* Firefox 4 */
+  -webkit-animation: animate-btn 2s infinite;
+  /*Safari and Chrome*/
+}
+@keyframes animate-btn {
+  from {
+    left: 0;
+  }
+  to {
+    left: 10px;
+  }
+}
+@-moz-keyframes animate-btn {
+  from {
+    left: 0;
+  }
+  to {
+    left: 10px;
+  }
+}
+@-webkit-keyframes animate-btn {
+  from {
+    left: 0;
+  }
+  to {
+    left: 10px;
+  }
+}
+/*common animate pictrue*/
+.animate-pictrue {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.6s;
+  -moz-transition: width 0.6s;
+  /* Firefox 4 */
+  -webkit-transition: all 0.6s;
+  /*Safari and Chrome*/
+}
+.animate-pictrue:hover {
+  transform: scale(1.1);
 }
 /*success*/
 .case-con {
@@ -200,11 +254,8 @@ body .main header .headCon_box .active {
 .case-con .caselist .cases a .case-dis .icon-case .icon-07jiantouxiangyoufill {
   display: none;
 }
-.case-con .caselist .cases a:hover {
-  box-shadow: 0px 6px 12px 0px rgba(202, 202, 202, 0.5);
-}
 .case-con .caselist .cases a:hover .icon-case {
-  top: -28px;
+  top: -26px;
   font-size: 38px;
 }
 .case-con .caselist .cases a:hover .icon-case .icon-07jiantouxiangyou {
@@ -213,7 +264,7 @@ body .main header .headCon_box .active {
 }
 .case-con .caselist .cases a:hover .icon-case .icon-07jiantouxiangyoufill {
   display: block;
-  color: #2782E8;
+  color: #0253BA;
 }
 /*common article and discript*/
 .article-title {
@@ -280,6 +331,31 @@ h6 {
   padding-top: 13px;
   margin-top: 13px;
   border-top: 2px solid #333333;
+}
+/*partner*/
+.partner {
+  padding: 100px 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+.partner .swc-case {
+  padding: 30px 0 70px 5px;
+}
+.partner .swc-case ul {
+  padding: 0;
+}
+.partner .swc-case ul li {
+  margin-right: 26px;
+  width: 277px;
+  height: 140px;
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 3px 8px 0px rgba(223, 223, 223, 0.5);
+}
+.partner .swc-case ul li:nth-child(4) {
+  margin-right: 0;
 }
 /*footer*/
 footer {
@@ -367,6 +443,27 @@ footer .copyright p {
   font-size: 12px;
   color: #cccccc;
   line-height: 80px;
+}
+.top {
+  position: fixed;
+  z-index: 999;
+  bottom: 80px;
+  right: 50px;
+  width: 60px;
+  height: 60px;
+  background: #1c1c1c;
+  text-align: center;
+}
+.top a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.top a span {
+  font-size: 28px;
 }
 .clearfix {
   display: block;

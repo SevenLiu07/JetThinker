@@ -102,9 +102,10 @@
                     display: block;
                     width: 284px;
                     height: 394px;
-                    img{
-                        width: 100%;
+                    .imagebox{
+                        width: 284px;
                         height: 260px;
+                        overflow: hidden;
                     }
                     .imgText{
                         text-align: left;
@@ -160,10 +161,15 @@
                 }
                 .discript{
                     padding: 60px 60px 0 60px;
+                    .icon-comma-top{
+                        // .icons(@width,@height,@posit-x,@posit-y)
+                        .icons(23px,23px,-1062px,0);
+                    }
                     p{
                         font-size:20px;
                         color:@color-gray;
-                        line-height:26px;
+                        line-height:36px;
+                        padding: 0 0 0 40px;
                         span{
                             color: @color-grays;
                         }
@@ -189,24 +195,5 @@
     .success-case{
         padding:@module-padding-bottom;
         background: url(../images/case_bg.png) center bottom no-repeat;
-    }
-    /*partner*/
-    .partner{
-        padding: @module-padding;
-        .content-box();
-        .swc-case{
-            padding: 30px 0 70px 5px;
-            .showcase{
-                .onecase{
-                    width:277px;
-                    height:140px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    box-shadow:0px 3px 8px 0px rgba(223,223,223,0.5);
-                }
-            }
-
-        }
     }
 }

@@ -38,6 +38,15 @@ $(document).ready(function(){
             clickable: true,
         },
     })
+    // product center
+    var swiper = new Swiper('.swc-product', {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    })
     // nav
     $(window).scroll(function (event) {
         if ($('html').scrollTop() > 680) {
