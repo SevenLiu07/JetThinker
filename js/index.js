@@ -49,7 +49,14 @@ $(document).ready(function(){
     })
     // nav
     $(window).scroll(function (event) {
-        if ($('html').scrollTop() > 680) {
+        var bannerHeight=680;
+        if($(".banner_box").hasClass("big-banner")){
+            bannerHeight=680;
+        } else{
+            bannerHeight=540;
+        }
+        
+        if ($('html').scrollTop() > bannerHeight) {
             $('.header').css({"background": "rgba(0, 0, 0,1)"});
         } else {
             $('.header').css({"background": "rgba(0, 0, 0,0.3)"});
