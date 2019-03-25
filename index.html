@@ -28,7 +28,7 @@
                         <li><a href="./view/production.html">产品中心<span class="iconfont icon-jiantou2"></span><div class="role"></div></a>
                             <div class="sub_menu">
                                 <ul>
-                                    <li><a href="./view/insight.html">Insight&nbsp;数据智能服务平台</a></li>
+                                    <li><a href="./view/insight.html">Insight&nbsp;数据资产服务平台</a></li>
                                     <li><a href="./view/mimir.html">Mimir&nbsp;人工智能服务平台</a></li>
                                     <li><a href="./view/gaia.html">Gaia&nbsp;智慧应用服务平台</a></li>
                                     <li><a href="./view/rig.html">Rig&nbsp;生物认证服务平台</a></li>
@@ -50,36 +50,10 @@
             </div>
         </header>
         <!-- banner -->
-        <div class="banner_box big-banner">
-            <div class="swiper-container swc-banner banner_box" id="banners">
-                <div class="swiper-wrapper swiper_box">
-                    <div class="bannerOne swiper-slide">
-                        <div class="bannerText">
-                            <p>Insight-数据智能服务平台</p>
-                            <p class="banner-dis">为企业快速构建大数据资产应用生态服务体系，助理企业加快数据价值变现。</p>
-                        </div>
-                    </div>
-                    <div class="bannerTwo swiper-slide">
-                        <div class="bannerText">
-                            <p>Mimir-人工智能服务平台</p>
-                            <p class="banner-dis">基于大数据和AI算法模型，结合企业知识和应用场景，帮助企业提升数据价值，更好的货客、留客，提高核心竞争力。</p>
-                        </div>
-                    </div>
-                    <div class="bannerThree swiper-slide">
-                        <div class="bannerText">
-                            <p>Knowledge Driven Business</p>
-                            <p class="banner-dis">专业数据智能产品服务提供商 助力企业数字驱动业务价值变现</p>
-                        </div>
-                    </div>
-                    <div class="bannerFour swiper-slide">
-                        <div class="bannerText">
-                            <p>Rig-生物认证服务平台</p>
-                            <p class="banner-dis">生物认证服务平台满足企业不同等级风控要求，结合大数据和AI技术，帮助企业提升获客能力，提升用户体验。</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- 如果需要分页器 -->
-                <div class="swiper-pagination swp-banner"></div>
+        <div class="banner">
+            <div id="banner-canvas">
+                <canvas id="canvas" width="1250" height="573"></canvas>
+                <div class="stars"></div>
             </div>
         </div>
         <div class="content-module">
@@ -92,9 +66,9 @@
                 <div class="product_img_box">
                     <div class="product_img">
                         <a href="./view/gaia.html">
-                        <div class="imagebox"><img class="animate-pictrue" src="./images/home-img2.png" alt="数据智能服务平台"></div>
+                        <div class="imagebox"><img class="animate-pictrue" src="./images/home-img2.png" alt="数据资产服务平台"></div>
                         <div class="imgText">
-                            <h5>数据智能服务平台</h5>
+                            <h5>数据资产服务平台</h5>
                             <p>Data intelligent service …</p>
                             <span class="details iconfont icon-jiantou-copy"></span>
                         </div>
@@ -124,8 +98,8 @@
                         <a href="./view/rig.html">
                         <div class="imagebox"><img class="animate-pictrue" src="./images/home-img4.png" alt="生物认证服务平台"></div>
                         <div class="imgText">
-                            <h5>生物认证服务平台</h5>
-                            <p>Smart application service …</p>
+                            <p class="topText">生物认证服务平台</p>
+                            <p class="bottomText">Smart application service …</p>
                             <span class="details iconfont icon-jiantou-copy"></span>
                         </div>
                         </a>
@@ -275,6 +249,11 @@
         </div>
     </div>
     <script src="./js/index.js"></script>
+    <script src="./js/TweenLite.min.js"></script>
+    <script src="./js/prefixfree.min.js"></script>
+    <script src="./js/stopExecutionOnTimeout.js"></script>
+    <script src="./js/EasePack.min.js"></script>
+    <script src="./js/bannerCanvas.js"></script>
 </body>
 
 </html>
