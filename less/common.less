@@ -26,6 +26,24 @@
   height: @height;
 }
 
+/*common styles for background pictrue scroll*/
+@keyframes bg-move {
+  from{background-position:center -100px}
+  to{background-position:center 0}
+}
+@-webkit-keyframes bg-move{
+  from{background-position:center -100px}
+  to{background-position:center 0}
+}
+@keyframes bg-moves {
+  from{background-position:center 0}
+  to{background-position:center -50px}
+}
+@-webkit-keyframes bg-moves{
+  from{background-position:center 0}
+  to{background-position:center -50px}
+}
+
 * {
   font-family: MicrosoftYaHei;
 }
@@ -113,6 +131,7 @@ body {
                 padding: 0 35px;
                 display: block;
                 border-bottom:2px solid transparent;
+                cursor: pointer;
                 .role{
                     display: block;
                     position: absolute;
@@ -137,8 +156,10 @@ body {
             /* Safari and Chrome */
             @-webkit-keyframes nav_move 
             {
-            from {top:0px;}
-            to {top:200px;}
+              // from {top:0px;}
+              // to {top:200px;}
+              from{ width: 0}
+              to{ width: 100%}
             }
             .active{
                 border-bottom:2px solid  @color-white !important;
@@ -199,9 +220,10 @@ body {
               background: @color-white;
               width: 380px;
               height: 360px;
-              img{
+              .caseimagebox {
                   width: 380px;
                   height: 260px;
+                  overflow: hidden;
               }
               .case-dis{
                   position: relative;
@@ -466,6 +488,7 @@ footer .copyright p {
   height:60px;
   background:rgba(28,28,28,1);
   text-align: center;
+  display: none;
 }
 .top a{
   display: block;

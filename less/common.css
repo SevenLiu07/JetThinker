@@ -9,6 +9,39 @@
   @posit-x：图标在x轴位置
   @posit-y：图标在y轴位置
 */
+/*common styles for background pictrue scroll*/
+@keyframes bg-move {
+  from {
+    background-position: center -100px;
+  }
+  to {
+    background-position: center 0;
+  }
+}
+@-webkit-keyframes bg-move {
+  from {
+    background-position: center -100px;
+  }
+  to {
+    background-position: center 0;
+  }
+}
+@keyframes bg-moves {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center -50px;
+  }
+}
+@-webkit-keyframes bg-moves {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center -50px;
+  }
+}
 * {
   font-family: MicrosoftYaHei;
 }
@@ -111,6 +144,7 @@ body .main header .headCon_box .menulist ul li a {
   padding: 0 35px;
   display: block;
   border-bottom: 2px solid transparent;
+  cursor: pointer;
 }
 html .main header .headCon_box .menulist ul li a .role,
 body .main header .headCon_box .menulist ul li a .role {
@@ -138,10 +172,10 @@ body .main header .headCon_box .menulist ul li a:hover .role {
 }
 @-webkit-keyframes nav_move {
   from {
-    top: 0px;
+    width: 0;
   }
   to {
-    top: 200px;
+    width: 100%;
   }
 }
 html .main header .headCon_box .active,
@@ -219,9 +253,10 @@ body .main header .headCon_box .active {
   width: 380px;
   height: 360px;
 }
-.case-con .caselist .cases a img {
+.case-con .caselist .cases a .caseimagebox {
   width: 380px;
   height: 260px;
+  overflow: hidden;
 }
 .case-con .caselist .cases a .case-dis {
   position: relative;
@@ -454,6 +489,7 @@ footer .copyright p {
   height: 60px;
   background: #1c1c1c;
   text-align: center;
+  display: none;
 }
 .top a {
   display: block;
