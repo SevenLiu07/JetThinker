@@ -3,6 +3,10 @@
   width: 1200px;
   margin: 0 auto;
 }
+/* const content padding */
+.pad-bottom {
+  padding: 0 0 100px 0;
+}
 /*css sprites
   @width：图标宽度
   @height：图标高度
@@ -44,6 +48,9 @@
 }
 * {
   font-family: MicrosoftYaHei;
+}
+.nopad {
+  padding-right: 0!important;
 }
 html,
 body {
@@ -230,10 +237,129 @@ body .main header .headCon_box .active {
 .animate-pictrue:hover {
   transform: scale(1.1);
 }
-/*success*/
+/*info center*/
+.info-center {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+}
+.info-center .info-lists {
+  padding: 50px 0 0 0 ;
+}
+.info-center .info-lists ul {
+  margin: 0;
+}
+.info-center .info-lists ul li {
+  border-bottom: 1px solid #E9E9E9;
+  padding: 20px 0;
+}
+.info-center .info-lists ul li a {
+  display: flex;
+  flex-flow: row;
+}
+.info-center .info-lists ul li a .info-img {
+  width: 270px;
+  height: 138px;
+}
+.info-center .info-lists ul li a .info-img img {
+  width: 270px;
+  height: 138px;
+}
+.info-center .info-lists ul li a .info-discript {
+  flex: 1 1 auto;
+  padding: 0 0 0 40px;
+}
+.info-center .info-lists ul li a .info-discript .info-title {
+  height: 46px;
+  line-height: 46px;
+}
+.info-center .info-lists ul li a .info-discript .info-title h5 {
+  font-size: 18px;
+  font-family: MicrosoftYaHei;
+  color: #333333;
+}
+.info-center .info-lists ul li a .info-discript .info-title p {
+  font-size: 14px;
+  color: #999999;
+}
+.info-center .info-lists ul li a .info-discript p {
+  font-size: 14px;
+  color: #999999;
+  line-height: 24px;
+  margin: 0;
+}
+.info-center .info-lists ul li a .info-discript .info-more {
+  display: none;
+  font-size: 14px;
+  width: 88px;
+  height: 32px;
+  line-height: 32px;
+  background: #0253ba;
+  text-align: center;
+  margin-top: 10px;
+}
+.info-center .info-lists ul li a .info-discript .info-more .arrow {
+  color: #ffffff;
+  font-weight: bold;
+}
+.info-center .info-lists ul li a:hover .info-more {
+  display: block;
+}
+/*home------product center & subpage------successfull cases*/
+.product_img a:last-child {
+  margin-right: 0;
+}
+/*success cases*/
 .case-con {
   width: 1200px;
   margin: 0 auto;
+}
+.case-con .product_img_box {
+  padding: 50px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.case-con .product_img_box a {
+  margin: 0 20px 20px 0;
+  display: block;
+  width: 380px;
+  height: 380px;
+}
+.case-con .product_img_box a .imagebox {
+  width: 380px;
+  height: 260px;
+  overflow: hidden;
+}
+.case-con .product_img_box a .imgText {
+  text-align: center;
+  padding: 15px 16px;
+}
+.case-con .product_img_box a .imgText h5 {
+  font-size: 18px;
+  color: #333333;
+  line-height: 24px;
+  font-weight: 300;
+}
+.case-con .product_img_box a .imgText p {
+  font-size: 16px;
+  color: #999999;
+  line-height: 21px;
+  margin: 0;
+}
+.case-con .product_img_box a .imgText span {
+  display: none;
+  color: #0253BA;
+  font-size: 24px;
+  margin-top: 19px;
+}
+.case-con .product_img_box a:hover {
+  background: #ffffff;
+  box-shadow: 0px 6px 12px 0px rgba(202, 202, 202, 0.5);
+  text-align: center;
+}
+.case-con .product_img_box a:hover .details {
+  display: block;
 }
 .case-con .caselist {
   display: flex;
@@ -367,6 +493,56 @@ h6 {
   padding-top: 13px;
   margin-top: 13px;
   border-top: 2px solid #333333;
+}
+/*咨询中心及成功案例内容页底部页面跳转styles*/
+.pagelinks {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+}
+.pagelinks ul {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+}
+.pagelinks ul li a {
+  display: flex;
+  flex-direction: row;
+  width: 460px;
+  text-align: center;
+  background: #f5f5f5;
+  padding: 35px 20px;
+  color: #666666;
+}
+.pagelinks ul li a img {
+  display: none;
+  width: 100px;
+  height: 50px;
+}
+.pagelinks ul li a p {
+  padding-left: 20px;
+  line-height: 50px;
+  margin: 0;
+}
+.pagelinks ul li a span {
+  font-size: 22px;
+  padding: 15px 0 0 30px;
+}
+.pagelinks ul li a:hover {
+  background: #0253ba;
+  color: #ffffff;
+}
+.pagelinks ul li a:hover img {
+  display: block;
+}
+.pagelinks ul li a:hover p {
+  width: 238px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /*partner*/
 .partner {

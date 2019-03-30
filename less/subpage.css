@@ -3,14 +3,54 @@
   width: 1200px;
   margin: 0 auto;
 }
+/* const content padding */
+.pad-bottom {
+  padding: 0 0 100px 0;
+}
 /*css sprites
   @width：图标宽度
   @height：图标高度
   @posit-x：图标在x轴位置
   @posit-y：图标在y轴位置
 */
+/*common styles for background pictrue scroll*/
+@keyframes bg-move {
+  from {
+    background-position: center -100px;
+  }
+  to {
+    background-position: center 0;
+  }
+}
+@-webkit-keyframes bg-move {
+  from {
+    background-position: center -100px;
+  }
+  to {
+    background-position: center 0;
+  }
+}
+@keyframes bg-moves {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center -50px;
+  }
+}
+@-webkit-keyframes bg-moves {
+  from {
+    background-position: center 0;
+  }
+  to {
+    background-position: center -50px;
+  }
+}
 * {
   font-family: MicrosoftYaHei;
+}
+.nopad {
+  padding-right: 0!important;
 }
 html,
 body {
@@ -111,6 +151,7 @@ body .main header .headCon_box .menulist ul li a {
   padding: 0 35px;
   display: block;
   border-bottom: 2px solid transparent;
+  cursor: pointer;
 }
 html .main header .headCon_box .menulist ul li a .role,
 body .main header .headCon_box .menulist ul li a .role {
@@ -138,10 +179,10 @@ body .main header .headCon_box .menulist ul li a:hover .role {
 }
 @-webkit-keyframes nav_move {
   from {
-    top: 0px;
+    width: 0;
   }
   to {
-    top: 200px;
+    width: 100%;
   }
 }
 html .main header .headCon_box .active,
@@ -196,10 +237,129 @@ body .main header .headCon_box .active {
 .animate-pictrue:hover {
   transform: scale(1.1);
 }
-/*success*/
+/*info center*/
+.info-center {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+}
+.info-center .info-lists {
+  padding: 50px 0 0 0 ;
+}
+.info-center .info-lists ul {
+  margin: 0;
+}
+.info-center .info-lists ul li {
+  border-bottom: 1px solid #E9E9E9;
+  padding: 20px 0;
+}
+.info-center .info-lists ul li a {
+  display: flex;
+  flex-flow: row;
+}
+.info-center .info-lists ul li a .info-img {
+  width: 270px;
+  height: 138px;
+}
+.info-center .info-lists ul li a .info-img img {
+  width: 270px;
+  height: 138px;
+}
+.info-center .info-lists ul li a .info-discript {
+  flex: 1 1 auto;
+  padding: 0 0 0 40px;
+}
+.info-center .info-lists ul li a .info-discript .info-title {
+  height: 46px;
+  line-height: 46px;
+}
+.info-center .info-lists ul li a .info-discript .info-title h5 {
+  font-size: 18px;
+  font-family: MicrosoftYaHei;
+  color: #333333;
+}
+.info-center .info-lists ul li a .info-discript .info-title p {
+  font-size: 14px;
+  color: #999999;
+}
+.info-center .info-lists ul li a .info-discript p {
+  font-size: 14px;
+  color: #999999;
+  line-height: 24px;
+  margin: 0;
+}
+.info-center .info-lists ul li a .info-discript .info-more {
+  display: none;
+  font-size: 14px;
+  width: 88px;
+  height: 32px;
+  line-height: 32px;
+  background: #0253ba;
+  text-align: center;
+  margin-top: 10px;
+}
+.info-center .info-lists ul li a .info-discript .info-more .arrow {
+  color: #ffffff;
+  font-weight: bold;
+}
+.info-center .info-lists ul li a:hover .info-more {
+  display: block;
+}
+/*home------product center & subpage------successfull cases*/
+.product_img a:last-child {
+  margin-right: 0;
+}
+/*success cases*/
 .case-con {
   width: 1200px;
   margin: 0 auto;
+}
+.case-con .product_img_box {
+  padding: 50px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.case-con .product_img_box a {
+  margin: 0 20px 20px 0;
+  display: block;
+  width: 380px;
+  height: 380px;
+}
+.case-con .product_img_box a .imagebox {
+  width: 380px;
+  height: 260px;
+  overflow: hidden;
+}
+.case-con .product_img_box a .imgText {
+  text-align: center;
+  padding: 15px 16px;
+}
+.case-con .product_img_box a .imgText h5 {
+  font-size: 18px;
+  color: #333333;
+  line-height: 24px;
+  font-weight: 300;
+}
+.case-con .product_img_box a .imgText p {
+  font-size: 16px;
+  color: #999999;
+  line-height: 21px;
+  margin: 0;
+}
+.case-con .product_img_box a .imgText span {
+  display: none;
+  color: #0253BA;
+  font-size: 24px;
+  margin-top: 19px;
+}
+.case-con .product_img_box a:hover {
+  background: #ffffff;
+  box-shadow: 0px 6px 12px 0px rgba(202, 202, 202, 0.5);
+  text-align: center;
+}
+.case-con .product_img_box a:hover .details {
+  display: block;
 }
 .case-con .caselist {
   display: flex;
@@ -333,6 +493,56 @@ h6 {
   padding-top: 13px;
   margin-top: 13px;
   border-top: 2px solid #333333;
+}
+/*咨询中心及成功案例内容页底部页面跳转styles*/
+.pagelinks {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 0 50px 0;
+}
+.pagelinks ul {
+  display: flex;
+  padding: 0;
+  flex-direction: row;
+}
+.pagelinks ul li a {
+  display: flex;
+  flex-direction: row;
+  width: 460px;
+  text-align: center;
+  background: #f5f5f5;
+  padding: 35px 20px;
+  color: #666666;
+}
+.pagelinks ul li a img {
+  display: none;
+  width: 100px;
+  height: 50px;
+}
+.pagelinks ul li a p {
+  padding-left: 20px;
+  line-height: 50px;
+  margin: 0;
+}
+.pagelinks ul li a span {
+  font-size: 22px;
+  padding: 15px 0 0 30px;
+}
+.pagelinks ul li a:hover {
+  background: #0253ba;
+  color: #ffffff;
+}
+.pagelinks ul li a:hover img {
+  display: block;
+}
+.pagelinks ul li a:hover p {
+  width: 238px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  white-space: nowrap;
 }
 /*partner*/
 .partner {
@@ -486,8 +696,309 @@ footer .copyright p {
   line-height: 40px;
   font-weight: 500;
 }
+/*get icons成功案例二级页面icons*/
+.caseicons-one1 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -182px 0;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-one2 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1277px -10px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-one3 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -362px 0;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-one4 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -543px 0;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-one5 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1422px 0;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-one7 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1752px 0;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-one8 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 -162px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two1 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -173px -157px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two2 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -354px -157px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two3 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -537px -162px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two4 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1442px -15px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two5 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -717px -157px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two6 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -889px -157px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two7 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 -160px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-two8 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1596px 0;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three1 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1068px -163px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three2 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1239px -168px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three3 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1410px -155px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three4 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1566px -144px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three5 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -532px -157px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three6 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1442px -7px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three7 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -723px 0;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-three8 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -889px -164px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four1 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1754px -163px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four2 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1239px -340px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four3 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -170px -338px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four4 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -350px -338px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four5 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -512px -338px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four6 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -676px -338px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four7 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -850px -338px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-four8 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1074px -338px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five1 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1243px -343px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five2 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1416px -343px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five3 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1588px -343px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five4 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1756px -343px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five5 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 -525px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five6 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -164px -515px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five7 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -350px -515px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-five8 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -516px -515px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six1 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -696px -521px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six2 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -890px -521px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six3 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1070px -521px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six4 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1240px -521px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six5 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1409px -521px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six6 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -1580px -521px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six7 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: -350px -521px;
+  width: 82px;
+  height: 82px;
+}
+.caseicons-six8 {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 -689px;
+  width: 82px;
+  height: 82px;
+}
 .banner-cases {
   background: url("../images/case_banner.png") center top no-repeat;
+}
+.banner-cases-one {
+  background: url("../images/case_banner2.png") center top no-repeat;
+}
+.banner-cases-two {
+  background: url("../images/case_banner3.png") center top no-repeat;
+}
+.banner-cases-three {
+  background: url("../images/case_banner4.png") center top no-repeat;
+}
+.banner-cases-four {
+  background: url("../images/case_banner5.png") center top no-repeat;
+}
+.banner-cases-five {
+  background: url("../images/case_banner6.png") center top no-repeat;
+}
+.banner-cases-six {
+  background: url("../images/case_banner7.png") center top no-repeat;
 }
 .banner-product {
   background: url("../images/banner1.png") center bottom no-repeat;
@@ -510,6 +1021,15 @@ footer .copyright p {
 .banner-company {
   background: url("../images/us_banner1.png") center top no-repeat;
 }
+.banner-info-one {
+  background: url("../images/us_banner3.png") center top no-repeat;
+}
+.banner-info-two {
+  background: url("../images/us_banner4.png") center top no-repeat;
+}
+.banner-info-three {
+  background: url("../images/us_banner5.png") center top no-repeat;
+}
 .sub-banner {
   height: 540px;
 }
@@ -517,6 +1037,13 @@ footer .copyright p {
   width: 1200px;
   margin: 0 auto;
   padding-top: 166px;
+}
+.sub-banner .sub-banner-text h3 {
+  font-size: 54px;
+  color: #ffffff;
+  line-height: 71px;
+  font-weight: 300;
+  margin-top: 60px;
 }
 .sub-banner .sub-banner-text p {
   font-size: 50px;
@@ -576,7 +1103,7 @@ footer .copyright p {
 }
 /*function description*/
 .descript-fun {
-  background: url("../images/cases_bg.png") center bottom no-repeat;
+  background: url("../images/cases_bg.png") center 380px no-repeat;
 }
 /*common production styles*/
 .feature-con {
@@ -704,8 +1231,36 @@ footer .copyright p {
   padding: 0;
 }
 .planlist ul li {
+  position: relative;
   width: 535px;
   float: left;
+  min-height: 173px;
+  /*模块背景文字ONE/TWO/THREE...*/
+}
+.planlist ul li .li-bg {
+  position: absolute;
+  z-index: 100;
+  font-size: 100px;
+  font-family: MicrosoftYaHei-Bold;
+  font-weight: bold;
+  color: #f7f7f7;
+  line-height: 66px;
+}
+.planlist ul li .li-con {
+  position: absolute;
+  z-index: 188;
+}
+.planlist ul li .li-con h5 {
+  font-size: 22px;
+  color: #333333;
+  line-height: 40px;
+  font-weight: 500;
+}
+.planlist ul li .li-con p {
+  font-size: 16px;
+  color: #666666;
+  line-height: 24px;
+  padding-right: 60px;
 }
 .planlist ul li h5 {
   font-size: 22px;
@@ -717,26 +1272,29 @@ footer .copyright p {
   font-size: 16px;
   color: #666666;
   line-height: 24px;
+  padding-right: 60px;
 }
 .planlist ul li:nth-child(1) {
   border-right: 1px solid #ddd;
-  padding-right: 60px;
   height: 173px;
 }
 .planlist ul li:nth-child(2) {
   padding-left: 60px;
+  padding-right: 0;
   height: 173px;
 }
 .planlist ul li:nth-child(3) {
   border-top: 1px solid #ddd;
   border-right: 1px solid #ddd;
-  padding-right: 60px;
   padding-top: 60px;
 }
 .planlist ul li:nth-child(4) {
-  border-top: 1px solid #ddd;
   padding-left: 60px;
+  border-top: 1px solid #ddd;
   padding-top: 60px;
+}
+.module-padding {
+  padding: 100px 0 0 0;
 }
 /*service list*/
 .service-list {
@@ -756,9 +1314,49 @@ footer .copyright p {
   font-size: 60px;
   text-align: center;
   margin: 0 30px 30px 0;
+  /*get icons成功案例二级页面icons*/
 }
 .service-list ul li span {
   font-size: 60px;
+}
+.service-list ul li .mar-auto {
+  margin: 0 auto;
+}
+.service-list ul li .caseicons-one-one {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 0;
+  width: 82px;
+  height: 82px;
+}
+.service-list ul li .caseicons-one-two {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 0;
+  width: 82px;
+  height: 82px;
+}
+.service-list ul li .caseicons-one-three {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 0;
+  width: 82px;
+  height: 82px;
+}
+.service-list ul li .caseicons-one-four {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 0;
+  width: 82px;
+  height: 82px;
+}
+.service-list ul li .caseicons-one-five {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 0;
+  width: 82px;
+  height: 82px;
+}
+.service-list ul li .caseicons-one-six {
+  background: url(../images/icons.png) left top no-repeat;
+  background-position: 0 0;
+  width: 82px;
+  height: 82px;
 }
 .service-list ul li h5 {
   margin-top: 20px;
@@ -782,20 +1380,27 @@ footer .copyright p {
 .service-list ul li:nth-child(6) {
   margin-right: 0;
 }
-/*FUNCTION DESCRIPTION*/
+/*FUNCTION DESCRIPTION 成功案例内容页*/
 .service-list-small {
-  padding-bottom: 70px;
+  padding-bottom: 0;
 }
 .service-list-small ul li {
   width: 224px;
   height: 200px;
   /*-60px padding*/
-  margin: 0 20px 0 0;
+  margin: 0 20px 20px 0;
+  box-shadow: 0px 5px 12px -3px rgba(204, 204, 204, 0.5);
 }
 .service-list-small ul li:nth-child(2) {
   margin: 0 20px 0 0;
 }
 .service-list-small ul li:nth-child(4) {
+  margin-right: 0;
+}
+.service-list-small ul li:nth-child(6) {
+  margin: 0 20px 0 0;
+}
+.service-list-small ul li:nth-child(8) {
   margin-right: 0;
 }
 .product-list {
@@ -813,6 +1418,44 @@ footer .copyright p {
   display: block;
   background: #f8f8f8;
   color: #666666;
+}
+/*infomation*/
+.info-content {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0 0 0;
+}
+.info-content h4 {
+  font-size: 24px;
+  color: #666666;
+  line-height: 50px;
+}
+.info-content .time {
+  height: 33px;
+  line-height: 33px;
+  color: #999999;
+}
+.info-content .info-con {
+  padding: 50px 0;
+  font-size: 16px;
+}
+.info-content .info-con h5 {
+  font-size: 16px;
+  color: #666666;
+}
+.info-content .info-con p {
+  line-height: 32px;
+  font-size: 16px;
+  color: #999999;
+}
+.info-content .info-con .pictrues {
+  padding: 50px 0;
+}
+.info-content .info-con .pictrues img {
+  margin-right: 15px;
+}
+.info-content .info-con .pictrues img:nth-child(4) {
+  margin-right: 0;
 }
 /*aboutus-company*/
 .company {

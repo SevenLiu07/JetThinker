@@ -3,6 +3,7 @@
 @color-grays: rgba(51, 51, 51, 1);
 @color-gray-six: rgba(102,102,102,1);
 @color-blue: rgba(35, 56, 118, 1);
+@color-blues: rgba(2,83,186,1);
 @module-padding: 100px 0;
 @module-padding-top: 100px 0 0 0;
 @module-padding-bottom: 0 0 100px 0;
@@ -12,6 +13,13 @@
 .content-box {
   width: 1200px;
   margin: 0 auto;
+}
+/* const content padding */
+.const-padding(@paddingtop,@paddingright,@paddingbottom,@paddingleft){
+  padding: @paddingtop @paddingright @paddingbottom @paddingleft;
+}
+.pad-bottom{
+  padding: @module-padding-bottom;
 }
 /*css sprites
   @width：图标宽度
@@ -47,7 +55,7 @@
 * {
   font-family: MicrosoftYaHei;
 }
-
+.nopad{ padding-right: 0!important;}
 html,
 body {
   font-family: MicrosoftYaHei;
@@ -202,9 +210,135 @@ body {
 .animate-pictrue:hover{
   transform: scale(1.1);
 }
-/*success*/
+/*info center*/
+.info-center{
+  .content-box();
+  padding: @content-pad-top;
+  .info-lists{
+    padding: 50px 0 0 0 ;
+    ul{
+      margin: 0;
+      li{
+        border-bottom: 1px solid #E9E9E9;
+        padding: 20px 0;
+        a{
+          display: flex;
+          flex-flow: row;
+          .info-img{
+            width: 270px;
+            height: 138px;
+            img{
+              width: 270px;
+              height: 138px;
+            }
+          }
+          .info-discript{
+            flex: 1 1 auto;
+             padding: 0 0 0 40px;
+             .info-title{
+              height: 46px;
+              line-height:46px;
+              h5{
+                font-size:18px;
+                font-family:MicrosoftYaHei;
+                color:@color-grays;
+               }
+               p{
+                font-size:14px;
+                color:@color-gray;
+               }
+             }
+             p{
+              font-size:14px;
+              color:@color-gray;
+              line-height:24px;
+              margin: 0;
+             }
+             .info-more {
+              display: none;
+              font-size: 14px;
+              width:88px;
+              height:32px;
+              line-height: 32px;
+              background:@color-blues;
+              text-align: center;
+              margin-top: 10px;
+              .arrow{
+                  color: @color-white;
+                  font-weight: bold;
+              }
+            }
+          }
+        }
+        a:hover{
+          .info-more {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}
+/*home------product center & subpage------successfull cases*/
+  .product_img(@box-width, @box-height, @pic-height) { 
+      a {
+          margin: 0 20px 20px 0;
+          display: block;
+          width: @box-width;
+          height: @box-height;
+
+          .imagebox {
+              width: @box-width;
+              height: @pic-height;
+              overflow: hidden; 
+          }
+
+          .imgText {
+              text-align: center;
+              padding: 15px 16px;
+
+              h5 {
+                  .article-title();
+              }
+
+              p {
+                  .article-discript();
+              }
+
+              span {
+                  display: none;
+                  color: #0253BA;
+                  font-size: 24px;
+                  margin-top: 19px;
+              }
+          }
+      }
+
+      a:hover {
+          background: @color-white;
+          box-shadow: 0px 6px 12px 0px rgba(202, 202, 202, 0.5);
+          text-align: center;
+          .details {
+              display: block;
+          }
+      }
+  }
+
+  .product_img a:last-child {
+      margin-right: 0;
+  }
+/*success cases*/
 .case-con{
   .content-box();
+  
+  .product_img_box{   
+    padding: @content-pad-top;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    // .product_img(@box-width, @box-height, @pic-height) 
+    .product_img(380px,380px,260px); 
+  }
   .caselist{
       display: flex;
       flex-direction: row;
@@ -347,6 +481,56 @@ h6 {
   padding-top: 13px;
   margin-top: 13px;
   border-top: 2px solid @color-grays;
+}
+
+/*咨询中心及成功案例内容页底部页面跳转styles*/
+.pagelinks{
+  .content-box();
+  padding: 0 0 50px 0;
+  ul{
+      display: flex;
+      padding: 0;
+      flex-direction: row;
+      li{
+          a{
+              display: flex;
+              flex-direction: row;
+              width:460px;
+              text-align: center;
+              background:rgba(245,245,245,1);
+              padding: 35px 20px;
+              color: @color-gray-six;
+              img{
+                  display: none;
+                  width: 100px;
+                  height: 50px;
+              }
+              p{
+                  padding-left: 20px;
+                  line-height: 50px;
+                  margin: 0;
+              }
+              span{
+                  font-size: 22px;
+                  padding: 15px 0 0 30px;
+              }
+          }
+          a:hover{
+              background: @color-blues;
+              color: @color-white;
+              img{ display: block; }
+              p{
+                  width: 238px;
+                  overflow:hidden;
+                  text-overflow:ellipsis;
+                  -o-text-overflow:ellipsis;
+                  -webkit-text-overflow:ellipsis;
+                  -moz-text-overflow:ellipsis;
+                  white-space:nowrap;
+              }
+          }
+      }
+  }
 }
 /*partner*/
 .partner{
